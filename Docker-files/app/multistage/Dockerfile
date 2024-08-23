@@ -1,5 +1,5 @@
 FROM openjdk:11 AS build_image
-RUN apt update && apt install maven -y
+RUN apt-get update && apt-get  install maven -y
 RUN apt-get update && apt-get install -y --no-install-recommends maven
 RUN apt-get update && apt-get install -y --no-install-recommends maven && \
     apt-get clean && rm -rf /var/lib/apt/lists/*
